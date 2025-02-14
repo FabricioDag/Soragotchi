@@ -1,0 +1,15 @@
+{
+  "name": "soragotchi",
+  "version": "1.0.0",
+  "description": "Sora, the black cat tamagotchi!",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^34.2.0"
+  }
+}

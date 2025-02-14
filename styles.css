@@ -1,0 +1,322 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --screen-color: #839271;
+  --screen-shadow: #25271a;
+
+  --console-color: #ffdba1;
+
+  --border-button: #b97a57;
+  --background-button: #f9e6d0;
+}
+
+main {
+  height: 389px;
+  width: 316px;
+  background-color: var(--console-color);
+  background-image: url(./assets/bg.jfif);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* padding: 26px; */
+  font-family: "Press Start 2P", cursive;
+  text-align: center;
+  /* border-right: 4px solid var(--screen-shadow);
+  border-bottom: 4px solid var(--screen-shadow); */
+}
+
+.topBar {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  padding: 1rem 1.9rem;
+  width: 100%;
+  gap: 0.5rem;
+  /* background-color: rgba(255, 0, 0, 0.322); */
+
+  -webkit-app-region: drag;
+
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.topBar button {
+  -webkit-app-region: no-drag;
+  height: 20px;
+  width: 20px;
+  outline: 3px solid var(--border-button);
+  color: var(--border-button);
+  background-color: var(--background-button);
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.topBar button:hover {
+  background-color: var(--console-color);
+}
+
+.screen {
+  height: 157px;
+  width: 264px;
+  background-color: var(--screen-color);
+  border-top: 4px solid var(--screen-shadow);
+  border-left: 4px solid var(--screen-shadow);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  filter: contrast(120%) brightness(90%);
+}
+
+.filter {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  z-index: 100;
+  transition: 0.2s ease;
+}
+
+.filter.active {
+  background-color: rgba(27, 6, 148, 0.74);
+  /* mix-blend-mode: multiply; */
+  opacity: 0.5;
+}
+
+.topScreen {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  /* background-color: aquamarine; */
+  padding: 0.5rem;
+  align-items: center;
+}
+
+.humorIcon {
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 50%;
+  background-position: center;
+  background-size: contain;
+  mix-blend-mode: multiply;
+  display: grid;
+  place-content: center;
+
+  /* outline: 2px solid red; */
+
+  grid-column-start: 0;
+  grid-column-end: 1;
+}
+
+.lcdText {
+  font-size: 0.7rem;
+  color: #3b3228;
+  text-shadow: 1px 1px 0px #466957;
+
+  /* border: 2px solid red; */
+  grid-column-start: 1;
+  grid-column-end: 10;
+}
+
+.cat {
+  image-rendering: pixelated;
+  mix-blend-mode: multiply;
+  /* border: 2px solid green; */
+  height: 100%;
+
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.cat.perto {
+  background: url("./gatoPiscando/gatoPerto1.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.cat.longe {
+  background: url("./gatoRabo/gatoLonge1.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.cat.dormindo {
+  background: url("./gatoDormindo/gatoDormindo5.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.cat.fora {
+  background-color: #25271a;
+}
+
+.statusArea {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  /* border: 2px solid red; */
+}
+
+.status {
+  /* border: 2px solid aqua; */
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+  gap: 0.3rem;
+}
+
+.status i {
+  font-size: 1rem;
+}
+
+.status p {
+  font-size: 0.7rem;
+}
+
+.logo {
+  /* border: 2px solid red; */
+  padding: 5px;
+  filter: drop-shadow(2px 2px 0px #3f788d);
+}
+
+.actionsArea {
+  /* border: 2px solid red; */
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  position: relative;
+}
+
+.actionsArea button {
+  position: absolute;
+  height: 50px;
+  background-color: #5fa4bd;
+  width: 50px;
+  border-radius: 50%;
+  border: none;
+  filter: drop-shadow(0px 5px 0px #3f788d);
+  transition: 0.2s ease;
+  cursor: pointer;
+  color: #123542;
+}
+
+.actionsArea button i {
+  font-size: 1rem;
+}
+
+.actionsArea button:nth-child(1) {
+  top: 8px;
+  left: 20px;
+}
+
+.actionsArea button:nth-child(2) {
+  bottom: 8px;
+  left: 90px;
+}
+
+.actionsArea button:nth-child(3) {
+  top: 8px;
+  right: 90px;
+}
+
+.actionsArea button:nth-child(4) {
+  bottom: 8px;
+  right: 20px;
+}
+
+.actionsArea button:hover {
+  transform: translateY(2px);
+  filter: drop-shadow(0px 3px 0px #3f788d);
+}
+
+/* --------- Animations --------- */
+
+@keyframes gatoAnimado {
+  0% {
+    background-image: url("./gatoPiscando/gatoPerto1.png");
+  }
+  20% {
+    background-image: url("./gatoPiscando/gatoPerto2.png");
+  }
+  40% {
+    background-image: url("./gatoPiscando/gatoPerto3.png");
+  }
+  60% {
+    background-image: url("./gatoPiscando/gatoPerto4.png");
+  }
+  80% {
+    background-image: url("./gatoPiscando/gatoPerto3.png");
+  }
+  100% {
+    background-image: url("./gatoPiscando/gatoPerto1.png");
+  }
+}
+
+@keyframes gatoAnimadoLonge {
+  0% {
+    background-image: url("./gatoRabo/gatoLonge1.png");
+  }
+  20% {
+    background-image: url("./gatoRabo/gatoLonge2.png");
+  }
+  40% {
+    background-image: url("./gatoRabo/gatoLonge3.png");
+  }
+  50% {
+    background-image: url("./gatoRabo/gatoLonge4.png");
+  }
+  60% {
+    background-image: url("./gatoRabo/gatoLonge5.png");
+  }
+  80% {
+    background-image: url("./gatoRabo/gatoLonge4.png");
+  }
+  90% {
+    background-image: url("./gatoRabo/gatoLonge3.png");
+  }
+  100% {
+    background-image: url("./gatoRabo/gatoLonge2.png");
+  }
+}
+
+@keyframes gatoAnimadoDormindo {
+  0% {
+    background-image: url("./gatoDormindo/gatoDormindo1.png");
+  }
+  25% {
+    background-image: url("./gatoDormindo/gatoDormindo2.png");
+  }
+  50% {
+    background-image: url("./gatoDormindo/gatoDormindo3.png");
+  }
+  75% {
+    background-image: url("./gatoDormindo/gatoDormindo4.png");
+  }
+  100% {
+    background-image: url("./gatoDormindo/gatoDormindo5.png");
+  }
+}
+.debugArea {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.7rem;
+  border: 2px solid red;
+}

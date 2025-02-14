@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tamagotchi</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="scripts.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <main class="mainApp">
+      <div class="topBar">
+        <button class="minimizeButton">-</button>
+        <button class="closeButton">x</button>
+      </div>
+
+      <div class="screen">
+        <div class="topScreen">
+          <!-- <div class="humorIcon">
+            <i class="fa-regular fa-face-smile"></i>
+          </div> -->
+          <p class="lcdText"></p>
+        </div>
+
+        <div class="cat perto"></div>
+
+        <div class="statusArea">
+          <div class="status">
+            <i class="fa-solid fa-fish"></i>
+            <p class="hungerStatus">90</p>
+          </div>
+
+          <div class="status">
+            <i class="fa-solid fa-heart-crack"></i>
+            <p class="lonelinessStatus">80</p>
+          </div>
+
+          <div class="status">
+            <i class="fa-solid fa-moon"></i>
+            <p class="sleepinessStatus">20</p>
+          </div>
+        </div>
+
+        <div class="filter"></div>
+      </div>
+
+      <!-- <div class="debugArea">
+        <p class="debugEstado">---</p>
+        <p class="debugIsAlert">---</p>
+        <p class="debugIsLampOn">---</p>
+        <p class="debugIsWindowOpen">---</p>
+      </div> -->
+
+      <h2 class="logo">SORAGOTCHI</h2>
+
+      <div class="actionsArea">
+        <button class="feedButton">
+          <i class="fa-solid fa-fish"></i>
+        </button>
+
+        <button class="lampButton">
+          <i id="lampButtonIcon" class="fa-solid fa-lightbulb"></i>
+        </button>
+
+        <button class="petButton">
+          <i class="fa-solid fa-hand-sparkles"></i>
+        </button>
+
+        <button class="windowButton">
+          <i id="windowButtonIcon" class="fa-solid fa-door-closed"></i>
+        </button>
+      </div>
+    </main>
+  </body>
+</html>
